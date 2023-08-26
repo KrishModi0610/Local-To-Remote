@@ -1,0 +1,97 @@
+1.git --version                                     ==> To check the git Version
+    i) pwd                      ==> returns working directory
+
+2.ls                                                ==> list files  
+    2a.ls -a                                        ==> list all files including hidden (-a --> all files)
+
+3.git config --global user.name "My Name"           ==> set name 
+4.git config --global user.email "My Email"         ==> set email
+5.git config --list                                 ==> to show whether name and email has set or not
+
+6.git clone                                         ==> to clone repository from remote directory(github) to    local Directory
+
+7.cd .\                                             ==> change directory
+    7a. cd ..\\                                     ==> move to previous directory
+
+8.clear                                             ==> clear terminal
+
+9.git status                                        ==> to check the status 
+    i) untracked    => new files that git doesn't track yet
+    ii) modified    => changed
+    iii)staged      => file is ready to commit
+    iv)unmodified   => unchanged
+
+    // STAGED PATH
+10.git add <file name>          ==> adds new or changed files in your working directory
+    i) git add .                ==> adds all the files in the working directory
+
+11.git commit -m "some message"                     ==> it is record of change
+        --> git commit ==> then write some text ==> press esc ==> write ":wq"
+        --> git commit -a -m "some message"     ==> forced commit skipping stage part
+
+12.git push                     ==> upload local repo to remote repo
+        --> git push <name> main
+        --> git push -<set-upstream> origin main ==> not to always write full
+            i)    --> git push                   ==> just write this when <set-upstream >
+       
+    LOCAL TO REMOTE 
+13. git init                            ==> used to create a new git repo
+14. git remote add <name> <-link->      ==> add new Remote repository
+        --> git remote -v               ==> to verify remote repo
+15. git branch                          ==> to check branch
+        --> git branch -M <new name>    ==> to rename a branch
+
+    WORKFLOW FROM REMOTE TO LOCAL AND BACK TO REMOTE
+
+    1) Create GitHub repository
+    2) Clone git repository in local System ==> git clone <link>
+    3) Make Changes in Files in Local System
+    4) Add all the changes using "git add ."
+    5) Commit all the changes using "git commit -m "add some text" "
+    6) Push back to the remote repository "git push origin <branch name>"
+
+    GITHUB BRANCHES 
+
+1. git branch                           ==> (to check branch)
+2. git branch -M <new name>             ==> (to rename branch)
+3. git checkout <branch name>           ==> (to navigate/ change branch)
+4. git checkout -b <new branch name>    ==> (to create new branch)
+5. git branch -d <branch name>          ==> (to delete branch)
+
+        MERGE BRANCHES
+    Way 1
+1. git diff <branch_name>               ==> (to compare commits, branches, files & more)
+    --> i) git diff --staged            ==> to compare with the previous staged
+2. git merge <branch_name>              ==> (to merge 2 branches)
+
+    Way 2
+1. Create a Pull Request using GITHUB (PR) 
+
+Pull Request ==> It lets you tell others about changes you have pushed to a branch in a repository on GitHub.
+
+        PULL Command
+1. git pull origin main                 ==> used to fetch and download content from a remote repo and immediately update the local repo to match that content.
+
+        RESOLVING MERGE CONFLICTS
+ ==> An event that takes place when Git is unable to automatically resolve differences in code betweeen two commits
+
+        UNDOING Changes
+1. staged changes  --> added files
+        git reset <file name>
+        git reset
+2. commited changes (for one commit)
+        git reset HEAD~1 (Head == last commit) (Head~1 == Go 1 commit previous to HEAD)
+3. commited changes(for many commits)
+        git reset <commit hash>
+        git reset --hard <commit hash>
+
+        GIT LOG ==> To check all the commits
+1. git log                                  ==> to check all the commits
+2. git log -p -n                            ==> to check last n commits
+
+        FORK - A rough copy (bija na code apda account ma upadva)
+--> A fork is a new repository that shares code and visibility settings with the original "upstream" repository.
+
+        GIT REMOTE removing a repository
+1. git remote rm <name>  ==> Delete a repository
+2. git remote rename <old name> <new name> ==> Rename a remote Repository
