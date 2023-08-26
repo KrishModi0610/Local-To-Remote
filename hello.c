@@ -3,6 +3,6 @@
 
 int main() {
     printf("Hello \n");
-    printf("I am a programmer.");
+    printf("I am a programmer. \t");
     return 0;
 }
