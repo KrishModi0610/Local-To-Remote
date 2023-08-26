@@ -4,6 +4,6 @@
 int main() {
     printf("Hello \n");
     printf("I am a programmer. \n");
-    prinf("Krish");
+    int i;
     return 0;
 }
